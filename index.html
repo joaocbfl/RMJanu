@@ -1,21 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrar Estudante</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        label {
+            color: #555;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .form-section {
+            margin-bottom: 40px;
+        }
+
+        .form-section:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h2>Registrar Novo Estudante</h2>
-    <form action="register_student.php" method="post">
-        <label for="nome">Nome do Estudante:</label><br>
-        <input type="text" id="nome" name="nome_do_estudante" required><br>
-        <input type="submit" value="Registrar">
-    </form>
+    <div class="container">
+        <div class="form-section">
+            <h2>Registrar Novo Estudante</h2>
+            <form action="register_student.php" method="post">
+                <label for="nome">Nome do Estudante:</label>
+                <input type="text" id="nome" name="nome_do_estudante" required>
+                <input type="submit" value="Registrar">
+            </form>
+        </div>
 
-    <h2>Pesquisar Estudante</h2>
-    <form action="search_student.php" method="post">
-        <label for="search">Nome do Estudante:</label><br>
-        <input type="text" id="search" name="search_nome" required><br>
-        <input type="submit" value="Pesquisar">
-    </form>
+        <div class="form-section">
+            <h2>Pesquisar Estudante</h2>
+            <form action="search_student.php" method="post">
+                <label for="search">Nome do Estudante:</label>
+                <input type="text" id="search" name="search_nome" required>
+                <input type="submit" value="Pesquisar">
+            </form>
+        </div>
+    </div>
 </body>
 </html>
